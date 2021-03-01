@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         val intentFilter = IntentFilter()
         intentFilter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+        intentFilter.addAction(Intent.ACTION_POWER_CONNECTED)
+        intentFilter.addAction(Intent.ACTION_POWER_DISCONNECTED)
+        intentFilter.addAction(Intent.ACTION_BOOT_COMPLETED)
         this.registerReceiver(myReceiver,intentFilter)
 
     }

@@ -12,7 +12,6 @@ class MyReceiver : BroadcastReceiver() {
         // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
         val boolean = intent.getBooleanExtra("state", false)
         Toast.makeText(context, boolean.toString(), Toast.LENGTH_LONG).show()
-
-
+        Toast.makeText(context, intent.action.toString(), Toast.LENGTH_LONG).show()
     }
 }
